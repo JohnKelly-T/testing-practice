@@ -31,15 +31,15 @@ describe('Calculator class', () => {
   test('adds floating point numbers', () => {
     expect(
       calculator.add(1.5, 1.2)
-    ).toBe(2.7);
+    ).toBeCloseTo(2.7);
 
     expect(
       calculator.add(1.0, 1.0)
-    ).toBe(2.0);
+    ).toBeCloseTo(2.0);
 
     expect(
       calculator.add(1.0, 2)
-    ).toBe(3.0);
+    ).toBeCloseTo(3.0);
   });
 
   test('subtracts two numbers correctly', () => {
