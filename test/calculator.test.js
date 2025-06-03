@@ -14,7 +14,7 @@ describe('Calculator class', () => {
     ).toBe(4);
   });
 
-  test('accepts negative numbers', () => {
+  test('adds negative numbers', () => {
     expect(
       calculator.add(-1, 3)
     ).toBe(2);
@@ -28,7 +28,7 @@ describe('Calculator class', () => {
     ).toBe(-4);
   });
 
-  test('accepts floating point numbers', () => {
+  test('adds floating point numbers', () => {
     expect(
       calculator.add(1.5, 1.2)
     ).toBe(2.7);
