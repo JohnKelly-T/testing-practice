@@ -41,4 +41,38 @@ describe('Calculator class', () => {
       calculator.add(1.0, 2)
     ).toBe(3.0);
   });
+
+  test('subtracts two numbers correctly', () => {
+    expect(
+      calculator.subtract(4, 3)
+    ).toBe(1);
+  })
+
+  test('subtracts negative numbers', () => {
+    expect(
+      calculator.subtract(-1, 3)
+    ).toBe(-4);
+
+    expect(
+      calculator.subtract(1, -3)
+    ).toBe(4);
+
+    expect(
+      calculator.subtract(-1, -3)
+    ).toBe(2);
+  });
+
+  test('subtracts floating point numbers', () => {
+    expect(
+      calculator.subtract(1.5, 1.2)
+    ).toBeCloseTo(0.3);
+
+    expect(
+      calculator.subtract(4.0, 1.5)
+    ).toBeCloseTo(2.5);
+
+    expect(
+      calculator.subtract(1.0, 2)
+    ).toBeCloseTo(-1.0);
+  });
 })
