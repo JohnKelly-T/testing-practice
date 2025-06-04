@@ -42,6 +42,4 @@ function caesarCipher(string, shiftFactor) {
   return cipher;
 };
 
-console.log(caesarCipher('tR3!#f', 1));
-
 module.exports = { caesarCipher };
