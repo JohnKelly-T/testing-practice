@@ -75,4 +75,38 @@ describe('Calculator class', () => {
       calculator.subtract(1.0, 2)
     ).toBeCloseTo(-1.0);
   });
+
+  test('multiplies two numbers correctly', () => {
+    expect(
+      calculator.multiply(4, 3)
+    ).toBe(12);
+  })
+
+  test('multiplies negative numbers', () => {
+    expect(
+      calculator.multiply(-1, 3)
+    ).toBe(-3);
+
+    expect(
+      calculator.multiply(2, -3)
+    ).toBe(-6);
+
+    expect(
+      calculator.multiply(-1, -3)
+    ).toBe(3);
+  });
+
+  test('multiplies floating point numbers', () => {
+    expect(
+      calculator.multiply(1.5, 1.2)
+    ).toBeCloseTo(1.8);
+
+    expect(
+      calculator.multiply(4.0, 1.5)
+    ).toBeCloseTo(6.0);
+
+    expect(
+      calculator.multiply(1.0, 2)
+    ).toBeCloseTo(2.0);
+  });
 })
