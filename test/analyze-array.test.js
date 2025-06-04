@@ -12,4 +12,10 @@ describe('Analyze Array function', () => {
       analyzeArray([1,8,3,4,2,6]).min
     ).toBe(1);
   });
+
+  test('calculates max correctly', () => {
+    expect(
+      analyzeArray([1,8,3,4,2,6]).max
+    ).toBe(8);
+  });
 });
