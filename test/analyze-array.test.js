@@ -18,4 +18,10 @@ describe('Analyze Array function', () => {
       analyzeArray([1,8,3,4,2,6]).max
     ).toBe(8);
   });
+
+  test('calculates length correctly', () => {
+    expect(
+      analyzeArray([1,8,3,4,2,6]).length
+    ).toBe(6);
+  });
 });
