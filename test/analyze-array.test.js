@@ -6,4 +6,10 @@ describe('Analyze Array function', () => {
       analyzeArray([1,8,3,4,2,6]).average
     ).toBe(4);
   });
+
+  test('calculates min correctly', () => {
+    expect(
+      analyzeArray([1,8,3,4,2,6]).min
+    ).toBe(1);
+  });
 });
