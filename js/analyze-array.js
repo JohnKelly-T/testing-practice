@@ -2,7 +2,8 @@ function analyzeArray(arr) {
   let object = {
     average: findAverage(arr),
     min: findMin(arr),
-    max: findMax(arr)
+    max: findMax(arr),
+    length: arr.length
   };
 
   return object;
