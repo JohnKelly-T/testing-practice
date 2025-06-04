@@ -109,4 +109,38 @@ describe('Calculator class', () => {
       calculator.multiply(1.0, 2)
     ).toBeCloseTo(2.0);
   });
-})
+
+  test('divides two numbers correctly', () => {
+    expect(
+      calculator.divide(12, 3)
+    ).toBe(4);
+  })
+
+  test('divides negative numbers', () => {
+    expect(
+      calculator.divide(-1, 4)
+    ).toBe(-0.25);
+
+    expect(
+      calculator.divide(6, -3)
+    ).toBe(-2);
+
+    expect(
+      calculator.divide(-10, -5)
+    ).toBe(2);
+  });
+
+  test('divides floating point numbers', () => {
+    expect(
+      calculator.divide(1.5, 0.3)
+    ).toBeCloseTo(5.0);
+
+    expect(
+      calculator.divide(3.0, 1.5)
+    ).toBeCloseTo(2.0);
+
+    expect(
+      calculator.divide(1.0, 2)
+    ).toBeCloseTo(0.5);
+  });
+});
