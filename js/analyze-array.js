@@ -1,7 +1,8 @@
 function analyzeArray(arr) {
   let object = {
     average: findAverage(arr),
-    min: findMin(arr)
+    min: findMin(arr),
+    max: findMax(arr)
   };
 
   return object;
@@ -15,6 +16,12 @@ function findMin(arr) {
   return arr.reduce((acc, curr) => {
     return curr < acc ? curr : acc
   }, +Infinity);
+}
+
+function findMax(arr) {
+  return arr.reduce((acc, curr) => {
+    return curr > acc ? curr : acc
+  }, -Infinity);
 }
 
 module.exports = { analyzeArray };
